@@ -30,7 +30,7 @@ const Cart = (props) => {
       <div>
         <button onClick={clearCart}>Clear Cart</button>
       </div>
-        {children}
+      {children}
     </div>
   );
 };
