@@ -3,6 +3,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
@@ -20,7 +21,11 @@ const UserContext = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const authInfo = { user, createUser, signIn };
+  const logOut = () => {
+    return signOut(auth);
+  };
+
+  const authInfo = { user, createUser, signIn, logOut };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
