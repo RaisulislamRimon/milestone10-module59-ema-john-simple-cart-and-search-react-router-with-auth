@@ -14,13 +14,19 @@ const Header = () => {
         <Link to="/orders">Orders</Link>
         <Link to="/inventory">Inventory</Link>
         <Link to="/about">About</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Sign up</Link>
       </div>
       {user?.email && (
         <div>
           <h4 style={{ color: "white" }}>{user?.email}</h4>
         </div>
+      )}
+      {user?.uid ? (
+        <button>Sign out</button>
+      ) : (
+        <>
+          <Link to="/login">Login</Link>
+          <Link to="/signup">Sign up</Link>
+        </>
       )}
     </nav>
   );
