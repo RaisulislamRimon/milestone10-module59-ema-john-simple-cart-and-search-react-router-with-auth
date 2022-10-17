@@ -3,8 +3,11 @@ import "./Login.css";
 
 const Login = () => {
   return (
-    <div>
-      <h2>This is login</h2>
+    <div className="form-container">
+      <h2 className="form-title">Login</h2>
+      <form>
+
+      </form>
     </div>
   );
 };
