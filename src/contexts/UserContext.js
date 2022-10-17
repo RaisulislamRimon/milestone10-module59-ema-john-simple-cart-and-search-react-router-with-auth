@@ -28,12 +28,8 @@ const UserContext = ({ children }) => {
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        console.log("current user auth change : ", currentUser);
-        setUser(currentUser);
-      } else {
-        console.log("user not logged in");
-      }
+      console.log("current user auth change : ", currentUser);
+      setUser(currentUser);
     });
     return () => unSubscribe();
   }, []);
