@@ -1,10 +1,12 @@
 import React from 'react';
 
+const AuthContext = React.createContext();
+
 const UserContext = () => {
     return (
-        <div>
+        <AuthContext.Provider>
             
-        </div>
+        </AuthContext.Provider>
     );
 };
 
