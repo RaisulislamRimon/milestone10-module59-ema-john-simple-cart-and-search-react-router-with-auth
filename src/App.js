@@ -2,8 +2,10 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About/About";
 import Inventory from "./components/Inventory/Inventory";
+import Login from "./components/Login/Login";
 import Orders from "./components/Orders/Orders";
 import Shop from "./components/Shop/Shop";
+import SignUp from "./components/SignUp/SignUp";
 import Main from "./layouts/Main";
 import productsAndCartLoader from "./loaders/productsAndCartLoader";
 
@@ -31,6 +33,14 @@ const App = () => {
           // loader: () => fetch("products.json"),
           loader: productsAndCartLoader,
           element: <Orders />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
+        },
+        {
+          path: "/signup",
+          element: <SignUp />,
         },
       ],
     },
