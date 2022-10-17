@@ -17,9 +17,9 @@ const Header = () => {
         <Link to="/login">Login</Link>
         <Link to="/signup">Sign up</Link>
       </div>
-      {user && (
+      {user?.email && (
         <div>
-          <h4 style={{ color: "white" }}>{user}</h4>
+          <h4 style={{ color: "white" }}>{user?.email}</h4>
         </div>
       )}
     </nav>
