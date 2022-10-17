@@ -10,6 +10,7 @@ import Shop from "./components/Shop/Shop";
 import SignUp from "./components/SignUp/SignUp";
 import Main from "./layouts/Main";
 import productsAndCartLoader from "./loaders/productsAndCartLoader";
+import PrivateRoute from "./routes/PrivateRoute/PrivateRoute";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -32,7 +33,11 @@ const App = () => {
         },
         {
           path: "/shipping",
-          element: <Shipping />,
+          element: (
+            <PrivateRoute>
+              <Shipping />
+            </PrivateRoute>
+          ),
         },
         {
           path: "/orders",
