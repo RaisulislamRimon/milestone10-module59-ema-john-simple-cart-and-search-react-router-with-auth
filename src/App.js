@@ -5,6 +5,7 @@ import Inventory from "./components/Inventory/Inventory";
 import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
 import Orders from "./components/Orders/Orders";
+import Shipping from "./components/Shipping/Shipping";
 import Shop from "./components/Shop/Shop";
 import SignUp from "./components/SignUp/SignUp";
 import Main from "./layouts/Main";
@@ -28,6 +29,10 @@ const App = () => {
         {
           path: "/inventory",
           element: <Inventory />,
+        },
+        {
+          path: "/shipping",
+          element: <Shipping />,
         },
         {
           path: "/orders",
