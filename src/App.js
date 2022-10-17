@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About/About";
 import Inventory from "./components/Inventory/Inventory";
 import Login from "./components/Login/Login";
+import NotFound from "./components/NotFound/NotFound";
 import Orders from "./components/Orders/Orders";
 import Shop from "./components/Shop/Shop";
 import SignUp from "./components/SignUp/SignUp";
@@ -41,6 +42,10 @@ const App = () => {
         {
           path: "/signup",
           element: <SignUp />,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
         },
       ],
     },
