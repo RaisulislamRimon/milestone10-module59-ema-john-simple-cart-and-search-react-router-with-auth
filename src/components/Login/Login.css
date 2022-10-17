@@ -14,3 +14,26 @@
   color: #2a414f;
   text-align: center;
 }
+
+.form-control {
+  margin-left: 40px;
+}
+
+.form-control label {
+  display: block;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.0015em;
+  color: #2a414f;
+  margin-bottom: 10px;
+}
+
+.form-control input {
+  width: 415px;
+  height: 55px;
+  border: 1px solid #95a0a7;
+  border-radius: 5px;
+  font-size: 1.15em;
+  padding-left: 10px;
+}
