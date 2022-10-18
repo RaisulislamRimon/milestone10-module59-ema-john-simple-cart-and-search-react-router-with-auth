@@ -29,7 +29,11 @@ const App = () => {
         },
         {
           path: "/inventory",
-          element: <Inventory />,
+          element: (
+            <PrivateRoute>
+              <Inventory />
+            </PrivateRoute>
+          ),
         },
         {
           path: "/shipping",
